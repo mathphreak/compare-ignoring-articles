@@ -46,3 +46,19 @@ test('case sensitive by default', t => {
 test('case insensitive when configured', t => {
   t.is(cia('Fail', 'fail', false), cia('fail', 'fail'))
 })
+
+test('can be used to sort arrays', t => {
+  let arr = [
+    'An Incredible Title',
+    'a lowercase thing',
+    'The very best',
+    'example'
+  ]
+  arr.sort((x, y) => cia(x, y, true))
+  t.same(arr, [
+    'example',
+    'An Incredible Title',
+    'a lowercase thing',
+    'The very best'
+  ])
+})
