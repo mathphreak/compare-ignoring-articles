@@ -27,6 +27,14 @@ test('doesn\'t munge words that start with "A"', t => {
   t.is(cia('Apology', 'nothing'), 'Apology'.localeCompare('nothing'))
 })
 
+test('compares strings starting with "An"', t => {
+  t.is(cia('An Idea', 'Idea'), 'Idea'.localeCompare('Idea'))
+})
+
+test('doesn\'t munge words that start with "An"', t => {
+  t.is(cia('Anapestic Tetrameter', 'array'), 'Anapestic Tetrameter'.localeCompare('array'))
+})
+
 test('ignores both prefixes', t => {
   t.is(cia('The Word', 'A Word'), 'Word'.localeCompare('Word'))
 })

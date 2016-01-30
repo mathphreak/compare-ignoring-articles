@@ -2,7 +2,8 @@
 
 var prefixes = [
   'The',
-  'A'
+  'A',
+  'An'
 ]
 
 module.exports = function (str1, str2) {
