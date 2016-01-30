@@ -22,23 +22,28 @@ compareIgnoringArticles('The Title', 'Title');
 
 ## API
 
-### compareIgnoringArticles(input, [options])
+### compareIgnoringArticles(str1, str2)
 
-#### input
+#### str1
 
 Type: `string`
 
-Lorem ipsum.
+The first string to use.
 
-#### options
+#### str2
 
-##### foo
+Type: `string`
 
-Type: `boolean`  
-Default: `false`
+The second string to use.
 
-Lorem ipsum.
+#### Return
 
+- Negative when the str1 occurs before str2
+- Positive when the str1 occurs after str2
+- Returns 0 if they are equivalent
+
+Note that this is the same as [String#localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare),
+which this library uses once articles have been stripped.
 
 ## License
 

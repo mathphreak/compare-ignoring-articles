@@ -1,9 +1,12 @@
 {
   "name": "compare-ignoring-articles",
-  "version": "0.0.0",
-  "description": "My stylish module",
+  "version": "0.0.0-semantic",
+  "description": "Compare two strings while ignoring 'A' or 'The' at the beginning",
   "license": "MIT",
-  "repository": "mathphreak/compare-ignoring-articles",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathphreak/compare-ignoring-articles.git"
+  },
   "author": {
     "name": "Matt Horn",
     "email": "mathphreak@gmail.com",
@@ -13,19 +16,23 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "standard && ava"
+    "test": "standard && ava",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "files": [
     "index.js"
   ],
   "keywords": [
-    ""
+    "compare",
+    "article",
+    "ignore"
   ],
   "dependencies": {},
   "devDependencies": {
     "ava": "^0.8.0",
     "cz-conventional-changelog": "1.1.5",
-    "standard": "5.4.1"
+    "standard": "5.4.1",
+    "semantic-release": "^4.3.5"
   },
   "config": {
     "commitizen": {
