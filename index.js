@@ -12,8 +12,8 @@ module.exports = function (str1, str2) {
 
   for (var prefixIdx in prefixes) {
     if (prefixes.hasOwnProperty(prefixIdx)) {
-      str1 = str1.replace(new RegExp('^' + prefixes[prefixIdx] + ' '), '')
-      str2 = str2.replace(new RegExp('^' + prefixes[prefixIdx] + ' '), '')
+      str1 = str1.replace(new RegExp('^' + prefixes[prefixIdx] + ' ', 'i'), '')
+      str2 = str2.replace(new RegExp('^' + prefixes[prefixIdx] + ' ', 'i'), '')
     }
   }
 
