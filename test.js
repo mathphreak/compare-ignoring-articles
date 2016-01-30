@@ -38,3 +38,11 @@ test('doesn\'t munge words that start with "An"', t => {
 test('ignores both prefixes', t => {
   t.is(cia('The Word', 'A Word'), 'Word'.localeCompare('Word'))
 })
+
+test('case sensitive by default', t => {
+  t.not(cia('Fail', 'fail'), cia('fail', 'fail'))
+})
+
+test('case insensitive when configured', t => {
+  t.is(cia('Fail', 'fail', false), cia('fail', 'fail'))
+})

@@ -22,7 +22,7 @@ compareIgnoringArticles('The Title', 'Title');
 
 ## API
 
-### compareIgnoringArticles(str1, str2)
+### compareIgnoringArticles(str1, str2[, caseSensitive])
 
 #### str1
 
@@ -35,6 +35,13 @@ The first string to use.
 Type: `string`
 
 The second string to use.
+
+#### caseSensitive
+
+Type: `bool`
+Default: `true`
+
+Whether or not the comparison should be case sensitive.
 
 #### Return
 
